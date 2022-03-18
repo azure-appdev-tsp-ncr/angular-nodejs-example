@@ -3,8 +3,7 @@ FROM docker.io/node:10 AS ui-build
 WORKDIR /usr/src/app
 COPY my-app/ ./my-app/
 RUN cd my-app && npm install @angular/cli
-RUN npm install
-RUN npm run build
+RUN cd my-app && npm install && npm run build
 
 FROM docker.io/node:10 AS server-build
 WORKDIR /root/
