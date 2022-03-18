@@ -1,3 +1,4 @@
+#Use Multi-Container Build
 FROM docker.io/node:10 AS ui-build
 WORKDIR /usr/src/app
 COPY my-app/ ./my-app/
